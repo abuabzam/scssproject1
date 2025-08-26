@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Libertinus Sans";
+}
+
+header {
+  background-color: #e6e6e6;
+}
+
+.logo {
+  margin-right: auto;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+nav {
+  box-sizing: border-box;
+  padding: 1.5rem 2rem;
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul {
+  display: flex;
+  gap: 1em;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+nav li {
+  list-style-type: none;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: border 0.3s ease, border-radius 0.1s ease;
+}
+@media (max-width: 800px) {
+  nav li {
+    padding: 0.8rem 1rem;
+  }
+}
+nav li:hover {
+  border-radius: 30px;
+  border: 1px solid black;
+}
+
+.Card {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 500px;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  .Card {
+    width: 250px;
+    height: 250px;
+    flex: 1 1 250px;
+  }
+}
+
+.black-text-box {
+  color: white;
+  background-color: black;
+  padding: 10px 0;
+  overflow: hidden;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+
+.Main {
+  display: grid;
+  grid-template-rows: 200px auto;
+  grid-template-areas: "text text" "pic pic";
+}
+
+.text-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  grid-area: text;
+}
+.text-box h1 {
+  font-weight: 100;
+  font-size: 4.5em;
+}
+
+.pic-grid {
+  display: grid;
+  grid-template-rows: 30px auto;
+  grid-area: pic;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: baseline;
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+  }
+  nav {
+    width: auto;
+    padding: 0.8rem 1rem;
+    height: 120px;
+  }
+  ul {
+    gap: 0.5em;
+  }
+  .logo {
+    width: 100px;
+  }
+  li {
+    font-size: 0.5em;
+    font-weight: 900;
+  }
+  .text-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.8em 0;
+  }
+  .text-box h1 {
+    font-size: 2em;
+  }
+  .pic-grid {
+    display: grid;
+    grid-template-rows: 30px;
+    gap: 0;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .Main {
+    grid-template-areas: "pic pic" "pic pic " "text text";
+  }
+  .last {
+    grid-column: 1/4;
+    justify-self: center;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,31 @@
+@use 'variable';
+
+@mixin card{
+    width:450px;
+    height:450px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 500px;
+    justify-content: center;
+    @include sm{
+        width: 250px;
+        height: 250px;
+        flex: 1 1 250px;
+    }
+
+}
+@mixin btn{
+    padding: 10px 20px;
+    @include sm{
+        padding:0.8rem 1rem;
+    }
+    border: none;
+    cursor: pointer;
+    transition: border 0.3s ease, border-radius 0.1s ease;
+}
+
+@mixin sm{
+    @media (max-width:800px){
+        @content;
+    }
+}
